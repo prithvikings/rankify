@@ -1,0 +1,36 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn src/server.ts",
+    "worker:scan": "ts-node src/queue/scanWorker.ts",
+    "worker:ai": "ts-node src/queue/aiWorker.ts",
+    "worker:pdf": "ts-node src/queue/pdfWorker.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@google/genai": "^1.45.0",
+    "bullmq": "^5.71.0",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "express-rate-limit": "^7.2.0",
+    "google-auth-library": "^9.10.0",
+    "ioredis": "^5.10.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^9.3.0",
+    "node-cron": "^3.0.3",
+    "puppeteer": "^24.39.0",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^25.5.0",
+    "@types/node-cron": "^3.0.11",
+    "@types/uuid": "^10.0.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3"
+  }
+}
